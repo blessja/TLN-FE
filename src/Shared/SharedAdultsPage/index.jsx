@@ -11,6 +11,7 @@ import SayBonjur from "./Components/SayBonjur";
 // import UpcomingBatches from "./Components/UpcomingBatches";
 import WhyShould from "../../Components/HomeComp/WhyShould";
 import UpcomingBatches from "../UpcomingBatches";
+import EverythingYouNeedToKnowAboutLanguage from "./Components/EverythingYouNeedToKnowAboutLanguage";
 
 const SharedAdultsPage = ({ Data, language, context }) => {
   let faqs = [];
@@ -29,7 +30,7 @@ const SharedAdultsPage = ({ Data, language, context }) => {
       </div>
       <HowItWorks HowItWorksCardData={Data?.HowItWorksCardData} />
       <div className="relative flex justify-center items-center flex-col mb-[112px]">
-        <WhyShould data={Data.whyTLN}/>
+        <WhyShould data={Data.whyTLN} />
         {/* <div className="">
           <UpcomingBatches language={language} />
         </div> */}
@@ -44,9 +45,11 @@ const SharedAdultsPage = ({ Data, language, context }) => {
         <StudentsTestomony language={language} context={context} />
       </div>
       <FaqsLanguage FaqsData={faqs} />
-      {Data?.EveryThingYouNeedToKnowAbout?.length ? <EverythingYouNeedToKnowAboutLanguage
-        EveryThingYouNeedToKnowAbout={Data?.EveryThingYouNeedToKnowAbout}
-      />:null}
+      {Data?.EveryThingYouNeedToKnowAbout?.length ? (
+        <EverythingYouNeedToKnowAboutLanguage
+          EveryThingYouNeedToKnowAbout={Data?.EveryThingYouNeedToKnowAbout}
+        />
+      ) : null}
       {/* <SayBonjur SayBonjur={Data?.SayBonjur} /> */}
       {/* <div className="mx-auto 3xl:mx-auto relative flex justify-center items-center flex-col mb-[112px]">
         <LanguageLessons LanguageLesson={Data?.LanguageLesson} />
