@@ -6,15 +6,15 @@ import bannerImg from "../../../../Assets/college/CollegeBanner.png";
 import collegeWhyCardInfo from "./data/collegeWhyCardInfo";
 import WhyChooseUs from "../components/whyChooseUs/WhyChooseUs";
 import HowItWorks from "../components/HowItWorks";
-import howItWorksData from "../College/data/howItWorksData";
+import howItWorksData from "./data/howItWorksData";
 import Plans from "../components/plans/Plans";
 import plansData from "../components/plans/plansData";
 import SchoolForm from "../components/forms/SchoolForm";
 import OurAlumni from "../../../../Components/HomeComp/OurAlumni";
 import ProficiencyExams from "../../../../Components/HomeComp/ProficiencyExams";
 import EducationSlider from "../components/EducationSlider";
-import GreenBanner from "../components/GreenBanner"
-import PaymentBarMoving from "../components/PaymentBarMoving"
+import GreenBanner from "../components/GreenBanner";
+import PaymentBarMoving from "../components/PaymentBarMoving";
 
 const CollegePage = () => {
   return (
@@ -41,7 +41,7 @@ const CollegePage = () => {
         <EducationSlider />
       </div>
       <SchoolForm />
-      <GreenBanner title={"Subscribe to our newsletter"}/>
+      <GreenBanner title={"Subscribe to our newsletter"} />
       <PaymentBarMoving />
     </div>
   );

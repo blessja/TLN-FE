@@ -1,22 +1,22 @@
 "use client";
-import { GermanLanguageData } from "./../../../../Utilities/data/german/MainData";
 import SharedMainLanuagePage from "../../../../Shared/SharedMainLanguagePage/SharedMainLanuagePage";
+import { FrenchLanguageData } from "../../../../Utilities/data/french/MainData";
+
 import { useGetFilteredFAQsQuery } from "../../../../store/apiSlice";
 import { useEffect, useState } from "react";
-
-const GermanPage = () => {
+const FrenchPage = () => {
   const { data: faqData } = useGetFilteredFAQsQuery({
-    language: "German",
+    language: "French",
     context: "Language",
     category: "General",
   });
   const { data: everyData } = useGetFilteredFAQsQuery({
-    language: "German",
+    language: "French",
     context: "Language",
     category: "Everything you need to know",
   });
 
-  const [content, setContent] = useState(GermanLanguageData);
+  const [content, setContent] = useState(FrenchLanguageData);
   useEffect(() => {
     if (!faqData) return;
     if (!everyData) return;
@@ -31,9 +31,9 @@ const GermanPage = () => {
   }, [faqData, everyData]);
   return (
     <div>
-      <SharedMainLanuagePage Data={content} language={"German"} context={""} />
+      <SharedMainLanuagePage Data={content} language={"French"} context={""} />
     </div>
   );
 };
 
-export default GermanPage;
+export default FrenchPage;

@@ -1,6 +1,6 @@
 "use client";
 import SharedMainLanuagePage from "../../../../Shared/SharedMainLanguagePage/SharedMainLanuagePage";
-import { EnglishLanguageData } from "./../../../../Utilities/data/english/MainData";
+import { EnglishLanguageData } from "../../../../Utilities/data/english/MainData";
 import { useGetFilteredFAQsQuery } from "../../../../store/apiSlice";
 import { useEffect, useState } from "react";
 

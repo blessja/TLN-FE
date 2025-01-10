@@ -1,22 +1,22 @@
 "use client";
 import SharedMainLanuagePage from "../../../../Shared/SharedMainLanguagePage/SharedMainLanuagePage";
-import { FrenchLanguageData } from "./../../../../Utilities/data/french/MainData";
-
+import { JapaneseLanguageData } from "../../../../Utilities/data/japanese/MainData";
 import { useGetFilteredFAQsQuery } from "../../../../store/apiSlice";
 import { useEffect, useState } from "react";
-const FrenchPage = () => {
+
+const JapanesePage = () => {
   const { data: faqData } = useGetFilteredFAQsQuery({
-    language: "French",
+    language: "Japanese",
     context: "Language",
     category: "General",
   });
   const { data: everyData } = useGetFilteredFAQsQuery({
-    language: "French",
+    language: "Japanese",
     context: "Language",
     category: "Everything you need to know",
   });
 
-  const [content, setContent] = useState(FrenchLanguageData);
+  const [content, setContent] = useState(JapaneseLanguageData);
   useEffect(() => {
     if (!faqData) return;
     if (!everyData) return;
@@ -31,9 +31,13 @@ const FrenchPage = () => {
   }, [faqData, everyData]);
   return (
     <div>
-      <SharedMainLanuagePage Data={content} language={"French"} context={""} />
+      <SharedMainLanuagePage
+        Data={content}
+        language={"Japanese"}
+        context={""}
+      />
     </div>
   );
 };
 
-export default FrenchPage;
+export default JapanesePage;

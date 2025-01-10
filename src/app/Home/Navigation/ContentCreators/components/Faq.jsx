@@ -1,9 +1,8 @@
 "use client";
-import FaqsCard from "../.../../../../../../Shared/FaqsCard" ;
+import FaqsCard from "../../../../../Shared/FaqsCard";
 import frenchFlag from "../.../../../../../../Assets/FrenchPage/FrenchMain/FaqImg.svg";
 import Image from "next/image";
 import { useState } from "react";
-
 
 const Faqs = ({ data }) => {
   const [faqs, setFaqs] = useState(data.slice(0, 6)); // Initialize state with sliced data
@@ -36,14 +35,14 @@ const Faqs = ({ data }) => {
           </div>
         </div>
         <div className="w-full p-4 py-4 sm:py-6 sm:px-12">
-        <button
-          onClick={toggleSplicing}
-          className="h-[58px] px-8 py-3.5 rounded-lg border border-teal-600 justify-center items-center gap-2.5 inline-flex"
-        >
-          <div className="text-center text-teal-600 text-2xl font-medium">
-            {splicing ? "Read less FAQs" : "Read all FAQs"}
-          </div>
-        </button>
+          <button
+            onClick={toggleSplicing}
+            className="h-[58px] px-8 py-3.5 rounded-lg border border-teal-600 justify-center items-center gap-2.5 inline-flex"
+          >
+            <div className="text-center text-teal-600 text-2xl font-medium">
+              {splicing ? "Read less FAQs" : "Read all FAQs"}
+            </div>
+          </button>
         </div>
       </div>
     </div>

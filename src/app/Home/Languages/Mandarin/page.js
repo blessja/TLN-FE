@@ -1,22 +1,22 @@
 "use client";
 import SharedMainLanuagePage from "../../../../Shared/SharedMainLanguagePage/SharedMainLanuagePage";
-import { KoreanLanguageData } from "./../../../../Utilities/data/korean/MainData";
+import { MandarinLanguageData } from "../../../../Utilities/data/mandarin/MainData";
 import { useGetFilteredFAQsQuery } from "../../../../store/apiSlice";
 import { useEffect, useState } from "react";
 
-const KoreanPage = () => {
+const MandarinPage = () => {
   const { data: faqData } = useGetFilteredFAQsQuery({
-    language: "Korean",
+    language: "Mandarin",
     context: "Language",
     category: "General",
   });
   const { data: everyData } = useGetFilteredFAQsQuery({
-    language: "Korean",
+    language: "Mandarin",
     context: "Language",
     category: "Everything you need to know",
   });
 
-  const [content, setContent] = useState(KoreanLanguageData);
+  const [content, setContent] = useState(MandarinLanguageData);
   useEffect(() => {
     if (!faqData) return;
     if (!everyData) return;
@@ -31,9 +31,13 @@ const KoreanPage = () => {
   }, [faqData, everyData]);
   return (
     <div>
-      <SharedMainLanuagePage Data={content} language={"Korean"} context={""} />
+      <SharedMainLanuagePage
+        Data={content}
+        language={"Mandarin"}
+        context={""}
+      />
     </div>
   );
 };
 
-export default KoreanPage;
+export default MandarinPage;
